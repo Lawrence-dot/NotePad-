@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/NotePad-/static/css/main.48596a52.css",
+    "main.js": "/NotePad-/static/js/main.30d3ccfa.js",
+    "static/media/4066031.png": "/NotePad-/static/media/4066031.af688553acd863517f10.png",
+    "static/media/photo-1588421357574-87938a86fa28.jfif": "/NotePad-/static/media/photo-1588421357574-87938a86fa28.fec99adc1a84b4ab7aed.jfif",
+    "index.html": "/NotePad-/index.html",
+    "main.48596a52.css.map": "/NotePad-/static/css/main.48596a52.css.map",
+    "main.30d3ccfa.js.map": "/NotePad-/static/js/main.30d3ccfa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48596a52.css",
+    "static/js/main.30d3ccfa.js"
+  ]
+}
