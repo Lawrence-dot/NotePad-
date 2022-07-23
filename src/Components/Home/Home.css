@@ -1,0 +1,158 @@
+.Home {
+    background-image: url('../../Assets/photo-1588421357574-87938a86fa28.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.Navbar {
+    position: sticky;
+    top: 0;
+}
+
+.addCountdown {
+    position: fixed;
+    bottom: 10px;
+    height: 68px;
+    width: 70px;
+    font-size: 35px;
+    color: white;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.card {
+    background-color: whitesmoke;
+    border: 1px solid rgba(0, 0, 0, 0.548);
+    max-width: 200px;
+}
+
+.count-body {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    animation: fadeInUp 2s;
+    animation-delay: 3s;
+    /* height: 70px!important; */
+}
+
+.c-body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.count-body h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.count-container {
+    padding: 1px;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: fantasy;
+    font-style: oblique;
+}
+
+.timer-text {
+    margin-top: 30vh;
+    font-size: 70px;
+}
+
+.count-flex {
+    width: 750px;
+    margin-top: 15vh;
+}
+
+.count-flex div {
+    cursor: pointer;
+}
+
+
+.count-heading {
+    padding-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.count-icons {
+    cursor: pointer;
+}
+
+.home-time {
+    font-size: 90px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.timeandDate {
+    padding: 120px 10px;
+}
+
+.time {
+    font-size: 65px;
+}
+
+a.Countdown {
+    font-size: 25px;
+}
+
+@media (max-width : 640px) {
+    .count-flex {
+        width: 300px!important;
+        margin-top: 15vh;
+    }
+
+    .addCountdown {
+        position: fixed;
+        height: 70px;
+        width: 70px;
+        font-size: 40px;
+    }
+
+    .timeandDate {
+        padding: 20px 10px;
+    }
+
+    .home-time {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .count-container h1 {
+        font-size: 20px;
+    }
+
+    .time {
+        font-size: 45px!important;
+    }
+
+    .date {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {  
+    .home-time {
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .count-container h1 {
+        font-size: 30px;
+    }
+
+    .time {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1020px) { 
+    .count-flex {
+        width: 650px;
+        margin-top: 15vh;
+    }
+}
+
