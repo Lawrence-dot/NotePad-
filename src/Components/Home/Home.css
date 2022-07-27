@@ -1,202 +1,204 @@
 .Navbar {
-    position: sticky;
-    top: 0;
-    z-index: 20;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .background {
-    background-image: url('../../Assets/3.jpg');
-    background-color: #61dafb;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100vw;
-    position: fixed;
-    z-index: -99;
-    filter: brightness(0.4);
-  }
+  background-image: url("../../Assets/3.jpg");
+  background-color: #61dafb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -99;
+  filter: brightness(0.4);
+}
 
 .addCountdown {
-    position: fixed;
-    bottom: 10px;
-    height: 70px;
-    width: 70px;
-    font-size: 39px;
-    margin-right: 10px;
-    vertical-align: middle;
-    z-index: 2;
-    line-height: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.726);
+  position: fixed;
+  bottom: 10px;
+  height: 70px;
+  width: 70px;
+  font-size: 39px;
+  margin-right: 10px;
+  vertical-align: middle;
+  z-index: 2;
+  line-height: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.726);
 }
 
 .card {
-    background-color: whitesmoke;
-    border: 1px solid rgba(0, 0, 0, 0.548);
-    max-width: 200px;
+  background-color: whitesmoke;
+  border: 1px solid rgba(0, 0, 0, 0.548);
+  max-width: 200px;
 }
 
 .count-body {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    animation: fadeInUp 2s;
-    padding: 6px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: fadeInUp 2s;
+  padding: 6px;
 }
 
 .count-body:hover {
-    background-color: rgba(0, 0, 0, 0.21);
+  background-color: rgba(0, 0, 0, 0.21);
 }
 
 .c-body {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .count-body h1 {
-    margin-bottom: 10px;
-    font-size: 35px;
-    padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 35px;
+  padding: 10px 0;
 }
 
 .count-container {
-    padding: 1px;
-    cursor: pointer;
-    font-size: 40px;
-    font-family: fantasy;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 40px;
+  font-family: fantasy;
 }
 
 .timer-text {
-    margin-top: 3rem;
-    font-size: 40px;
+  margin-top: 3rem;
+  font-size: 40px;
 }
 
 .count-flex {
-    width: 750px;
-    margin-top: 15vh;
+  width: 750px;
+  margin-top: 15vh;
 }
 
 .count-flex div {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .count-heading {
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    color: white;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  color: white;
 }
 
 .count-icons {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .home-time {
-    font-weight: 600;
-    font-family: cursive;
+  font-weight: 600;
+  font-family: cursive;
 }
 
 .timeandDate {
-    padding: 60px 10px;
-    animation: fadeInDown 2s;
-    cursor: pointer;
+  padding: 60px 10px;
+  animation: fadeInDown 2s;
+  cursor: pointer;
 }
 
 .time {
-    font-size: 4.7rem;
+  font-size: 4.7rem;
 }
 
 .date {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 a.Countdown {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .countType {
-    position: relative;
-    bottom: 0;
-    opacity: .9;
+  position: relative;
+  bottom: 0;
+  opacity: 0.9;
 }
 
 .countinBox {
-    position: relative;
-    border-bottom: 0;
-    border-right: 0;
-    border-radius: 8px;
-} 
+  position: relative;
+  border-bottom: 0;
+  border-right: 0;
+  border-radius: 8px;
+}
 
 .countinBox p {
   padding: 10px 0;
 }
- 
+
 .timer {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
-@media (max-width: 1020px) { 
-    .count-flex {
-        width: 650px;
-        margin-top: 15vh;
-    }
-}
-
-@media (max-width: 768px) {  
-    .home-time {
-        font-size: 60px;
-        font-weight: 600;
-    }
-
-    .count-container h1 {
-        font-size: 30px;
-    }
-
-    .time {
-        font-size: 3.9rem;
-    }
-
-    .date {
-        font-size: 1.6rem;
-    }
+.delete {
+  width: 20px;
+  position: relative;
+  top: -5px;
 }
 
 
-@media (max-width : 640px) {
-    .count-flex {
-        width: 300px;
-        margin-top: 12vh;
-    }
-
-    .addCountdown {
-        position: fixed;
-        height: 60px;
-        width: 60px;
-        font-size: 30px;
-    }
-
-    .timeandDate {
-        padding: 26px 10px;
-    }
-
-    .home-time {
-        font-size: 60px;
-        font-weight: 600;
-    }
-
-    .count-container h1 {
-        font-size: 20px;
-    }
-
-    .time {
-        font-size: 3.4rem;
-    }
-
-    .date {
-        font-size: 1.5rem;
-        margin-top: -5px;
-    }
+@media (max-width: 1020px) {
+  .count-flex {
+    width: 650px;
+    margin-top: 15vh;
+  }
 }
 
+@media (max-width: 768px) {
+  .home-time {
+    font-size: 60px;
+    font-weight: 600;
+  }
 
+  .count-container h1 {
+    font-size: 30px;
+  }
 
+  .time {
+    font-size: 3.9rem;
+  }
 
+  .date {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .count-flex {
+    width: 300px;
+    margin-top: 12vh;
+  }
+
+  .addCountdown {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+  }
+
+  .timeandDate {
+    padding: 26px 10px;
+  }
+
+  .home-time {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .count-container h1 {
+    font-size: 20px;
+  }
+
+  .time {
+    font-size: 3.4rem;
+  }
+
+  .date {
+    font-size: 1.5rem;
+    margin-top: -5px;
+  }
+}

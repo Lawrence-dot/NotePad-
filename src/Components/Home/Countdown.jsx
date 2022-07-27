@@ -34,38 +34,34 @@ function Countdown(props) {
   };
 
   return (
-    <div className="count-bodypy- border rounded-md shadow-md m-5">
-      <Animated
-        animationIn="bounceInLeft"
-        animationOut="fadeOut"
-        isVisible={true}
+    <div className="count-body flex flex-wrap border rounded-md shadow-md m-5">
+      <div
+        className="count-container w-2/3 flex flex-wrap"
+        onClick={() => toCount()}
       >
-        <div className="flex count-icons justify-end">
+        <div className="border-right p-2 text-white bg-white-500 m-auto flex justify-center">
+          <h1 className="text-center">{props.title}</h1>
+        </div>
+      </div>
+
+      <div className="flex flex-col w-1/3 count-icons justify-end">
+        <div className="delSpan">
           <span
-            className="delete text-2xl sm:text-3xl text-red-300 mr-1"
+            className="delete text-2xl sm:text-3xl text-red-300 ml-auto flex"
             onClick={deleteHandler}
           >
             &#128465;
           </span>
         </div>
 
-        <div
-          className="count-container flex flex-wrap"
-          onClick={() => toCount()}
-        >
-          <div className="w-5/6 border-right p-2 text-white bg-white-500">
-            <h1 className="text-center">{props.title}</h1>
-          </div>
-
-          <div className="w-1/6 hidden countinBox md:block p-3 text-xl text-white border border-blue-500">
-            <p className="text-red-500">
-              {`${dayDiff > 0 ? dayDiff : "Expired!!!"} ${
-                dayDiff > 1 ? "Days to Go" : dayDiff === 1 ? "Day to Go" : " "
-              } `}
-            </p>
-          </div>
+        <div className=" countinBox md:block p-1 text-xl text-white border border-blue-500">
+          <p className="text-red-500">
+            {`${dayDiff > 0 ? dayDiff : "Expired!!!"} ${
+              dayDiff > 1 ? "Days to Go" : dayDiff === 1 ? "Day to Go" : " "
+            } `}
+          </p>
         </div>
-      </Animated>
+      </div>
     </div>
   );
 }
