@@ -1,9 +1,10 @@
-
 .App {
   text-align: center;
   color: blue;
   width: 100%;
+  position: relative;
 }
+
 
 .App input {
   margin: 20px auto;

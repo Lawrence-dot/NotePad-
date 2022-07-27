@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100%;
     z-index: 3;
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.37);
 }
 
 .form {
@@ -11,17 +11,19 @@
     justify-content: center;
     vertical-align: middle;
     align-items: center;
+
 }
 
 form {
     max-width: 500px;
     display: block;
     position: absolute;
-    top: 30%;
+    top: 20%;
     align-items: center;
     border:  1px solid rgba(47, 46, 43, 0.4);
-    background-color: white;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.959);
+    padding: 23px;
+    border-radius: 5px;
 }
 
 form button {
@@ -31,12 +33,12 @@ form button {
 }
 
 input {
+    background: transparent;
     border-bottom: 1px solid rgba(128, 128, 128, 0.589);
     width: 100%;
 }
 
 .cancel {
-    color: black;
     display: block;
     text-align: right;
     cursor: pointer;
@@ -45,7 +47,11 @@ input {
 }
 
 .sendBtn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: -17px;
+    height: 47px;
     line-height: 10px;
+    position: relative;
+     bottom: 0;
 }
