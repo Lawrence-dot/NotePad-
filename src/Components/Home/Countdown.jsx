@@ -42,7 +42,7 @@ function Countdown(props) {
       >
         <div className="flex count-icons justify-end">
           <span
-            className="delete text-xl sm:text-3xl text-red-300 mr-1"
+            className="delete text-2xl sm:text-3xl text-red-300 mr-1"
             onClick={deleteHandler}
           >
             &#128465;
