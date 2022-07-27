@@ -17,7 +17,6 @@ function Countdown(props) {
   const dataRef = collection(db, "Dates");
 
   const toCount = () => {
-    console.log("jj");
     navigate(`/Count/:${props.index}`, { state: dates[props.index] });
   };
 
@@ -35,7 +34,7 @@ function Countdown(props) {
   };
 
   return (
-    <div className="count-body border rounded-md shadow-md m-5">
+    <div className="count-bodypy- border rounded-md shadow-md m-5">
       <Animated
         animationIn="bounceInLeft"
         animationOut="fadeOut"
@@ -43,7 +42,7 @@ function Countdown(props) {
       >
         <div className="flex count-icons justify-end">
           <span
-            className="delete text-3xl text-red-300 mr-1"
+            className="delete text-xl sm:text-3xl text-red-300 mr-1"
             onClick={deleteHandler}
           >
             &#128465;
