@@ -8,18 +8,18 @@ import { FormContext } from "../Home/Home";
 const Form = () => {
   const [show, setShow, dates, setDates] = useContext(FormContext);
   const dateRef = useRef();
-  const timeRef = useRef();
   const titleRef = useRef();
   const dataRef = collection(db, "Dates");
 
+  const fetchDates = async () => {
+    const data = await getDocs(dataRef);
+    const sortDates = data.docs.map((date) => {
+      return { ...date.data(), id: date.id };
+    });
+    setDates(sortDates);
+  };
+
   useEffect(() => {
-    const fetchDates = async () => {
-      const data = await getDocs(dataRef);
-      const sortDates = data.docs.map((date) => {
-        return { ...date.data(), id: date.id };
-      });
-      setDates(sortDates);
-    };
     fetchDates();
   }, dates);
 
@@ -29,7 +29,6 @@ const Form = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    var date = new Date();
     if (titleRef.current.value != "" && dateRef.current.value != "") {
       const addNeww = {
         Title: titleRef.current.value,
@@ -41,6 +40,7 @@ const Form = () => {
       addDoc(dataRef, addNeww);
       dateRef.current.value = "";
       toggleForm();
+      fetchDates();
     } else {
       alert("Please Fill all input fields");
     }

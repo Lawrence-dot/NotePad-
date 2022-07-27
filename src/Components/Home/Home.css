@@ -40,6 +40,7 @@
     margin-left: 10px;
     margin-right: 10px;
     animation: fadeInUp 2s;
+    padding: 6px;
 }
 
 .count-body:hover {
@@ -79,7 +80,6 @@
     cursor: pointer;
 }
 
-
 .count-heading {
     padding: 20px;
     backdrop-filter: blur(5px);
@@ -102,11 +102,11 @@
 }
 
 .time {
-    font-size: 5rem;
+    font-size: 4.7rem;
 }
 
 .date {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 a.Countdown {
@@ -124,12 +124,12 @@ a.Countdown {
     border-bottom: 0;
     border-right: 0;
     border-radius: 8px;
-}
+} 
 
 .countinBox p {
   padding: 10px 0;
 }
-
+ 
 .timer {
     margin-top: 1rem;
 }
@@ -188,11 +188,12 @@ a.Countdown {
     }
 
     .time {
-        font-size: 3.5rem;
+        font-size: 3.4rem;
     }
 
     .date {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        margin-top: -5px;
     }
 }
 
