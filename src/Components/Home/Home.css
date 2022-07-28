@@ -137,7 +137,12 @@ a.Countdown {
 .delete {
   width: 20px;
   position: relative;
-  top: -5px;
+  margin-bottom: 5px;
+}
+
+.delete svg {
+  fill: rgba(177, 19, 19, 0.849);
+  padding: 2px;
 }
 
 
@@ -146,6 +151,7 @@ a.Countdown {
     width: 650px;
     margin-top: 15vh;
   }
+
 }
 
 @media (max-width: 768px) {
