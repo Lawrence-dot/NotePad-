@@ -114,7 +114,7 @@ function Count() {
       <div className="background"></div>
       <div className="c-body">
         <div className="countdown mx-2 font-bold text-center">
-          <h1 className="text-6xl drop-shadow count-heading py-2 mt-5 sm:mt-3 text-shadow sm:text-7xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl border border-blue-600 drop-shadow count-heading py-2 mt-5 sm:mt-3 text-shadow rounded-md">
             {location.state.Title}
           </h1>
           {showTimer()}
