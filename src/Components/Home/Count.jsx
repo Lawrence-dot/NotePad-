@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import useDate from "../../useDate";
 import "./Home.css";
+import Navbar from "./Navbar";
 
 function Count() {
   const location = useLocation();
@@ -111,6 +112,7 @@ function Count() {
 
   return (
     <div className="count">
+      <Navbar home="true" />
       <div className="background"></div>
       <div className="c-body">
         <div className="countdown mx-2 font-bold text-center">

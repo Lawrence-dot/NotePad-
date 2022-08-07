@@ -56,7 +56,7 @@ function Countdown(props) {
         </div>
 
         <div className=" countinBox md:block p-1 text-xl text-white border border-blue-500">
-          <p className="text-red-500">
+          <p className="text-white">
             {`${dayDiff > 0 ? dayDiff : "Expired!!!"} ${
               dayDiff > 1 ? "Days to Go" : dayDiff === 1 ? "Day to Go" : " "
             } `}

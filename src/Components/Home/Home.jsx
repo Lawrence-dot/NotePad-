@@ -6,6 +6,7 @@ import db from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import "animate.css";
 import useDate from "../../useDate";
+import Navbar from "./Navbar";
 export const FormContext = createContext();
 
 function Home() {
@@ -32,7 +33,22 @@ function Home() {
       const sortDates = data.docs.map((date) => {
         return { ...date.data(), id: date.id };
       });
-      setDates(sortDates);
+      data.length > 1
+        ? setDates(sortDates)
+        : setDates([
+            {
+              Title: "New",
+              Date: new Date(),
+              Time: new Date().getTime(),
+              id: "ldmeeo",
+            },
+            {
+              Title: "New Dast",
+              Date: new Date(),
+              Time: new Date().getTime(),
+              id: "ldmeeooo",
+            },
+          ]);
     };
     fetchDates();
   }, []);
@@ -68,6 +84,7 @@ function Home() {
 
   return (
     <FormContext.Provider value={[show, setShow, dates, setDates]}>
+      <Navbar home="false" />
       <div className="Home">
         {show && <Form />}
         <div className="background"></div>
