@@ -33,22 +33,7 @@ function Home() {
       const sortDates = data.docs.map((date) => {
         return { ...date.data(), id: date.id };
       });
-      data.length > 1
-        ? setDates(sortDates)
-        : setDates([
-            {
-              Title: "New",
-              Date: new Date(),
-              Time: new Date().getTime(),
-              id: "ldmeeo",
-            },
-            {
-              Title: "New Dast",
-              Date: new Date(),
-              Time: new Date().getTime(),
-              id: "ldmeeooo",
-            },
-          ]);
+      setDates(sortDates);
     };
     fetchDates();
   }, []);
