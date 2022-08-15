@@ -20,12 +20,9 @@ function Home() {
   var sec = d.getSeconds();
   var meridian = "AM";
 
-  if (hour > 12) {
-    hour = hour - 12;
-    meridian = "PM";
-  } else if (hour == 0) {
-    hour = 12;
-  }
+  setInterval(() => {
+    setD(new Date());
+  }, 1000);
 
   useEffect(() => {
     const fetchDates = async () => {
@@ -37,6 +34,18 @@ function Home() {
     };
     fetchDates();
   }, []);
+
+  useEffect(() => {
+    hour = d.getHours();
+    min = d.getMinutes();
+    sec = d.getSeconds();
+    if (hour > 12) {
+      hour = hour - 12;
+      meridian = "PM";
+    } else if (hour === 0) {
+      hour = 12;
+    }
+  }, [d]);
 
   const toggleNew = () => {
     setShow(!show);
@@ -56,16 +65,6 @@ function Home() {
         />
       );
     });
-
-  setInterval(() => {
-    setD(new Date());
-  }, 1000);
-
-  useEffect(() => {
-    hour = d.getHours();
-    min = d.getMinutes();
-    sec = d.getSeconds();
-  }, [d]);
 
   return (
     <FormContext.Provider value={[show, setShow, dates, setDates]}>

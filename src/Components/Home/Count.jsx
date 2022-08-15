@@ -28,74 +28,69 @@ function Count() {
     setDiff(new Date(location.state.Date).getTime() - new Date().getTime());
   }, 1000);
 
-  const showTimer = () => {
-    if (diff > 0) {
-      return (
-        <div className="count-flex mx-2 grid grid-cols-2 text-6xl sm:grid-cols-4 text-white ">
-          <div className="box-shadow pt-2 sm:pt-5 m-2 border border-radius-2 rounded">
-            <p className="my-3">{Items.stuffs[0].dayDiff}</p>
-            <p className="w-type countType bg-red-600 text-2xl p-2 rounded-b">
-              {" "}
-              {Items.stuffs[0].dayDiff > 1 ? "Days" : "Day"}{" "}
-            </p>
-          </div>
-
-          <div className="box-shadow pt-2 sm:pt-5 border m-2 pt-2 rounded ">
-            <p className="my-3">
-              {`${
-                Items.stuffs[0].hourDiff < 10
-                  ? `0${Items.stuffs[0].hourDiff}`
-                  : Items.stuffs[0].hourDiff
-              }`}{" "}
-            </p>
-            <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
-              {" "}
-              {Items.stuffs[0].hourDiff > 1 ? "Hours" : "Hour"}{" "}
-            </p>
-          </div>
-
-          <div className=" box-shadow pt-2 sm:pt-5 border m-2 pt-2 rounded ">
-            <p className=" my-3">
-              {`${
-                Items.stuffs[0].minDiff < 10
-                  ? `0${Items.stuffs[0].minDiff}`
-                  : Items.stuffs[0].minDiff
-              }`}{" "}
-            </p>
-            <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
-              {" "}
-              {Items.stuffs[0].minDiff > 1 ? "Mins" : "Min"}{" "}
-            </p>
-          </div>
-
-          <div className="box-shadow pt-2 sm:pt-5 m-2 border pt-2 rounded ">
-            <p className="my-3">
-              {`${
-                Items.stuffs[0].secDiff < 10
-                  ? `0${Items.stuffs[0].secDiff}`
-                  : Items.stuffs[0].secDiff
-              }`}{" "}
-            </p>
-            <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
-              {" "}
-              {Items.stuffs[0].secDiff > 1 ? "Secs" : "Sec"}{" "}
-            </p>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="timer">
-          <p className="timer-text text-5xl text-red-500">Expired!!!</p> <br />
-          <p className="text-white">
-            ({[dateValues.day]}, {dateValues.numDay}
-            {dateValues.numtype} {dateValues.month} {dateValues.year})
+  const showTimer =
+    diff > 0 ? (
+      <div className="count-flex mx-2 grid grid-cols-2 text-6xl sm:grid-cols-4 text-white ">
+        <div className="box-shadow pt-2 sm:pt-5 m-2 border border-radius-2 rounded">
+          <p className="my-3">{Items.stuffs[0].dayDiff}</p>
+          <p className="w-type countType bg-red-600 text-2xl p-2 rounded-b">
+            {" "}
+            {Items.stuffs[0].dayDiff > 1 ? "Days" : "Day"}{" "}
           </p>
-          <p> </p>
         </div>
-      );
-    }
-  };
+
+        <div className="box-shadow pt-2 sm:pt-5 border m-2 pt-2 rounded ">
+          <p className="my-3">
+            {`${
+              Items.stuffs[0].hourDiff < 10
+                ? `0${Items.stuffs[0].hourDiff}`
+                : Items.stuffs[0].hourDiff
+            }`}{" "}
+          </p>
+          <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
+            {" "}
+            {Items.stuffs[0].hourDiff > 1 ? "Hours" : "Hour"}{" "}
+          </p>
+        </div>
+
+        <div className=" box-shadow pt-2 sm:pt-5 border m-2 pt-2 rounded ">
+          <p className=" my-3">
+            {`${
+              Items.stuffs[0].minDiff < 10
+                ? `0${Items.stuffs[0].minDiff}`
+                : Items.stuffs[0].minDiff
+            }`}{" "}
+          </p>
+          <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
+            {" "}
+            {Items.stuffs[0].minDiff > 1 ? "Mins" : "Min"}{" "}
+          </p>
+        </div>
+
+        <div className="box-shadow pt-2 sm:pt-5 m-2 border pt-2 rounded ">
+          <p className="my-3">
+            {`${
+              Items.stuffs[0].secDiff < 10
+                ? `0${Items.stuffs[0].secDiff}`
+                : Items.stuffs[0].secDiff
+            }`}{" "}
+          </p>
+          <p className="w-type countType bg-blue-600 text-2xl p-2 rounded-b">
+            {" "}
+            {Items.stuffs[0].secDiff > 1 ? "Secs" : "Sec"}{" "}
+          </p>
+        </div>
+      </div>
+    ) : (
+      <div className="timer">
+        <p className="timer-text text-5xl text-red-500">Expired!!!</p> <br />
+        <p className="text-white">
+          ({[dateValues.day]}, {dateValues.numDay}
+          {dateValues.numtype} {dateValues.month} {dateValues.year})
+        </p>
+        <p> </p>
+      </div>
+    );
 
   useEffect(() => {
     setItems({
@@ -119,7 +114,7 @@ function Count() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl border border-blue-600 drop-shadow count-heading py-2 mt-5 sm:mt-3 text-shadow rounded-md">
             {location.state.Title}
           </h1>
-          {showTimer()}
+          {showTimer}
         </div>
       </div>
     </div>
